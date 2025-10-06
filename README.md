@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sentry.New - Next.js 15 Template
 
-## Getting Started
+A modern Next.js 15 template with Sentry branding and shadcn/ui components, designed for use with [Sentry.New](https://sentry.new) application builder.
 
-First, run the development server:
+## Features
+
+- **Next.js 15** with App Router
+- **Tailwind CSS v4** for styling
+- **shadcn/ui** components pre-installed (button, card, input, label, select, dialog, dropdown-menu, badge, avatar, sonner)
+- **Sentry brand colors** with purple and pink accent theming
+- **TypeScript** for type safety
+- **Dark mode** support with next-themes
+
+## Quick Start
+
+Use with degit to quickly scaffold a new project:
 
 ```bash
+npx degit codyde/template-nextjs15-sentry my-app
+cd my-app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or manually:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/codyde/template-nextjs15-sentry.git
+cd template-nextjs15-sentry
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to see your application.
+
+## Included Components
+
+This template comes with the following shadcn/ui components:
+
+- Button
+- Card
+- Input
+- Label
+- Select
+- Dialog
+- Dropdown Menu
+- Badge
+- Avatar
+- Sonner (Toast notifications)
+
+Add more components with:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## Color Scheme
+
+The template uses Sentry's brand colors:
+- Primary: Purple (#6C5FC7 / oklch(0.52 0.15 285))
+- Accent: Pink (#E1567C / oklch(0.65 0.18 340))
+- Background: Light purple tints for light mode, dark purple for dark mode
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
