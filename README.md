@@ -16,7 +16,7 @@ A modern Next.js 15 template with Sentry branding and shadcn/ui components, desi
 Use with degit to quickly scaffold a new project:
 
 ```bash
-npx degit codyde/template-nextjs15-sentry my-app
+npx degit codyde/template-nextjs15 my-app
 cd my-app
 npm install
 npm run dev
@@ -25,8 +25,8 @@ npm run dev
 Or manually:
 
 ```bash
-git clone https://github.com/codyde/template-nextjs15-sentry.git
-cd template-nextjs15-sentry
+git clone https://github.com/codyde/template-nextjs15.git
+cd template-nextjs15
 npm install
 npm run dev
 ```
