@@ -5,24 +5,26 @@ import { ArrowRight, Sparkles, Zap, Shield } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-accent/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-16 sm:py-24">
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           {/* Badge */}
-          <Badge variant="secondary" className="px-4 py-2">
+          <Badge variant="secondary" className="px-4 py-2 bg-secondary/50 border-primary/30">
             <Sparkles className="w-4 h-4 mr-2" />
             Powered by Sentry.New
           </Badge>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">
-            Build Production-Ready Apps{" "}
-            <span className="text-primary">Faster</span>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tight">
+            Next.js 15{" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Template
+            </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
-            A Next.js 15 template with Sentry branding, shadcn/ui components, and everything you need to ship your next project.
+            A production-ready Next.js 15 template with Sentry monitoring, shadcn/ui components, and modern best practices.
           </p>
 
           {/* CTA Buttons */}
@@ -72,40 +74,51 @@ export default function Home() {
 
         {/* Sentry Integration Code Snippet */}
         <div className="mt-24 max-w-4xl mx-auto">
-          <Card className="border-2">
+          <Card className="border-2 border-primary/30 bg-card/50 backdrop-blur">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-accent" />
-                Sentry Integration Ready
+              <CardTitle className="flex items-center gap-2 text-2xl">
+                <Shield className="w-6 h-6 text-primary" />
+                Sentry Integration
               </CardTitle>
-              <CardDescription>
-                Add Sentry monitoring in seconds with this simple setup
+              <CardDescription className="text-base">
+                Add error tracking and performance monitoring in seconds
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-2">1. Install Sentry SDK:</p>
-                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
-                    <code className="text-sm font-mono">npx @sentry/wizard@latest -i nextjs</code>
+                  <p className="text-sm text-muted-foreground mb-3 font-medium">Install Sentry SDK:</p>
+                  <pre className="bg-secondary/30 border border-primary/20 p-4 rounded-lg overflow-x-auto">
+                    <code className="text-sm font-mono text-primary">npx @sentry/wizard@latest -i nextjs</code>
                   </pre>
                 </div>
 
                 <div>
-                  <p className="text-sm text-muted-foreground mb-2">2. Configure your DSN:</p>
-                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
-                    <code className="text-sm font-mono">{`import * as Sentry from "@sentry/nextjs";
+                  <p className="text-sm text-muted-foreground mb-3 font-medium">Initialize in your app:</p>
+                  <pre className="bg-secondary/30 border border-primary/20 p-5 rounded-lg overflow-x-auto">
+                    <code className="text-sm font-mono text-foreground leading-relaxed">{`import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "YOUR_SENTRY_DSN",
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for tracing.
   tracesSampleRate: 1.0,
-  debug: false,
+
+  // Set profilesSampleRate to profile 10%
+  // of sampled transactions.
+  profilesSampleRate: 0.1,
+
+  // Capture Replay for 10% of all sessions,
+  // plus for 100% of sessions with an error
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1.0,
 });`}</code>
                   </pre>
                 </div>
 
                 <div className="flex items-center gap-2 pt-2">
-                  <Button variant="link" className="px-0" asChild>
+                  <Button variant="link" className="px-0 text-primary hover:text-primary/80" asChild>
                     <a
                       href="https://docs.sentry.io/platforms/javascript/guides/nextjs/"
                       target="_blank"
