@@ -46,29 +46,29 @@
 :root {
   --radius: 0.625rem;
   /* Sentry Dark Mode Colors */
-  --background: 11.125 13.333 23.922; /* Rich Black #181225 */
-  --foreground: 255 255 255;
-  --card: 24 18 37; /* Rich Black */
-  --card-foreground: 255 255 255;
-  --popover: 24 18 37;
-  --popover-foreground: 255 255 255;
-  --primary: 117 83 255; /* Blurple #7553FF */
-  --primary-foreground: 255 255 255;
-  --secondary: 78 42 154; /* Dk Blurple #4E2A9A */
-  --secondary-foreground: 255 255 255;
-  --muted: 54 22 107; /* Dk Violet #36166B */
-  --muted-foreground: 158 134 255; /* Lt Blurple #9E86FF */
-  --accent: 167 55 180; /* Dk Purple #A737B4 */
-  --accent-foreground: 255 255 255;
-  --destructive: 255 69 168; /* Dk Pink #FF45A8 */
-  --border: 78 42 154; /* Dk Blurple */
-  --input: 78 42 154;
-  --ring: 117 83 255; /* Blurple */
-  --chart-1: 117 83 255;
-  --chart-2: 167 55 180;
-  --chart-3: 78 42 154;
-  --chart-4: 158 134 255;
-  --chart-5: 77 10 85;
+  --background: rgb(11.125 13.333 23.922); /* Rich Black #181225 */
+  --foreground: rgb(255 255 255);
+  --card: rgb(24 18 37); /* Rich Black */
+  --card-foreground: rgb(255 255 255);
+  --popover: rgb(24 18 37);
+  --popover-foreground: rgb(255 255 255);
+  --primary: rgb(117 83 255); /* Blurple #7553FF */
+  --primary-foreground: rgb(255 255 255);
+  --secondary: rgb(78 42 154); /* Dk Blurple #4E2A9A */
+  --secondary-foreground: rgb(255 255 255);
+  --muted: rgb(54 22 107); /* Dk Violet #36166B */
+  --muted-foreground: rgb(158 134 255); /* Lt Blurple #9E86FF */
+  --accent: rgb(167 55 180); /* Dk Purple #A737B4 */
+  --accent-foreground: rgb(255 255 255);
+  --destructive: rgb(255 69 168); /* Dk Pink #FF45A8 */
+  --border: rgb(78 42 154); /* Dk Blurple */
+  --input: rgb(78 42 154);
+  --ring: rgb(117 83 255); /* Blurple */
+  --chart-1: rgb(117 83 255);
+  --chart-2: rgb(167 55 180);
+  --chart-3: rgb(78 42 154);
+  --chart-4: rgb(158 134 255);
+  --chart-5: rgb(77 10 85);
 }
 
 @layer base {
